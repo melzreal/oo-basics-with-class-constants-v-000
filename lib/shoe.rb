@@ -1,7 +1,6 @@
 class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
-
   BRANDS = []
 
   def initialize(brand)
@@ -17,7 +16,7 @@ class Shoe
       @brand = brand
       brand.each do |check|
         if check.uniq
-          BRANDS << check
+          BRANDS.push(check)
         end
       end
   end
