@@ -13,10 +13,11 @@ class Shoe
   end
 
   def brand=(brand)
+    duplicates = []
       @brand = brand
       brand.each do |check|
-        if check.uniq
-          BRANDS.push(check)
+        duplicates << check
+        duplicates.uniq << BRANDS
         end
       end
   end
