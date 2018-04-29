@@ -15,6 +15,10 @@ class Shoe
 
   def brand=(brand)
       @brand = brand
-      BRANDS << brand
-    end
+      brand.each do |check|
+        if check.uniq
+          BRANDS << check
+        end
+  end
+
 end
