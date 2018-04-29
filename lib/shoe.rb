@@ -19,6 +19,7 @@ class Shoe
         if check.uniq
           BRANDS << check
         end
+      end
   end
 
 end
