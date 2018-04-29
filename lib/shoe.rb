@@ -18,7 +18,6 @@ class Shoe
       brand.each do |check|
         duplicates << check
         duplicates.uniq << BRANDS
-        end
       end
   end
 
