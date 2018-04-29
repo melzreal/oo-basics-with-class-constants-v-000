@@ -5,6 +5,7 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
+    BRANDS << brand.uniq
   end
 
   def cobble
@@ -12,13 +13,5 @@ class Shoe
     puts "Your shoe is as good as new!"
   end
 
-  def brand=(brand)
-    duplicates = []
-      @brand = brand
-      brand.each do |check|
-        duplicates << check
-        duplicates.uniq << BRANDS
-      end
-  end
 
 end
